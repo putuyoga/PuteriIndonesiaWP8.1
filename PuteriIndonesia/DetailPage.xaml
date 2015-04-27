@@ -1,0 +1,26 @@
+﻿<Page
+    x:Class="PuteriIndonesia.DetailPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PuteriIndonesia"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+<Grid>
+    <Grid.RowDefinitions>
+        <RowDefinition Height="150" />
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="*" />
+    </Grid.RowDefinitions>
+    <Image Grid.Row="0" Source="{Binding Foto}" Stretch="UniformToFill" />
+    <StackPanel Grid.Row="1" Margin="24,12">
+        <TextBlock Text="{Binding Nama}" FontSize="32"/>
+        <TextBlock Text="{Binding Asal}" FontSize="18" Foreground="Gray"/>
+        <TextBlock Text="{Binding Tahun}" FontSize="18" Foreground="Gray" />
+    </StackPanel>
+    <ScrollViewer Grid.Row="2" Margin="24,12">
+        <TextBlock Text="{Binding Biografi}" FontSize="20" TextWrapping="WrapWholeWords"/>
+    </ScrollViewer>
+</Grid>
+</Page>
